@@ -3,6 +3,7 @@ package org.demre.myfragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,6 +49,10 @@ public class SecondFragment extends Fragment {
         FragmentSecondBinding binding = FragmentSecondBinding.inflate(getLayoutInflater(), container, false);
         binding.webView.loadUrl(mParam1);
 
+        binding.btnFinalizar.setOnClickListener(v -> {
+            FragmentManager fm = getActivity().getSupportFragmentManager();
+            fm.popBackStack();
+        });
         return binding.getRoot();
     }
 }
