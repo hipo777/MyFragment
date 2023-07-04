@@ -1,13 +1,10 @@
 package org.demre.myfragment;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import org.demre.myfragment.databinding.FragmentFirstBinding;
 
 public class FirstFragment extends Fragment {
@@ -47,7 +44,7 @@ public class FirstFragment extends Fragment {
         binding.btnIrWeb.setOnClickListener(v -> {
             String url = binding.editTextWeb.getText().toString();
             getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    SecondFragment.newInstance(url, ""), "").commit();
+                    SecondFragment.newInstance(url, ""), "").addToBackStack(null).commit();
 
         });
         return binding.getRoot();
