@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import org.demre.myfragment.databinding.FragmentFirstBinding;
 import org.demre.myfragment.databinding.FragmentSecondBinding;
@@ -17,6 +18,7 @@ public class SecondFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
     private String mParam1;
     private String mParam2;
+
     public SecondFragment() {
         // Required empty public constructor
     }
@@ -45,6 +47,7 @@ public class SecondFragment extends Fragment {
         // Inflate the layout for this fragment
         FragmentSecondBinding binding = FragmentSecondBinding.inflate(getLayoutInflater(), container, false);
         binding.webView.loadUrl(mParam1);
+
         return binding.getRoot();
     }
 }

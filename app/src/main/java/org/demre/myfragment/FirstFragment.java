@@ -1,10 +1,13 @@
 package org.demre.myfragment;
 
 import android.os.Bundle;
+
 import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import org.demre.myfragment.databinding.FragmentFirstBinding;
 
 public class FirstFragment extends Fragment {
@@ -13,6 +16,7 @@ public class FirstFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
     private String mParam1;
     private String mParam2;
+
     public FirstFragment() {
         // Required empty public constructor
     }
@@ -34,6 +38,7 @@ public class FirstFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
