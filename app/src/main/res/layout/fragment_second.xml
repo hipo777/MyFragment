@@ -2,36 +2,27 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/firstFrameLayout"
+    android:id="@+id/secondFrameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".SecondFragment">
 
-    <EditText
-        android:id="@+id/editTextWeb"
+    <WebView
+        android:id="@+id/webView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Escriba su web"
-        android:inputType="text"
+        android:layout_height="652dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnIrWeb"
+        android:id="@+id/btnFinalizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ver"
-        android:textSize="25sp"
+        android:text="Finalizar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextWeb" />
+        app:layout_constraintTop_toBottomOf="@+id/webView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
